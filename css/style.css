@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+#section06 {
+  background: url('https://picsum.photos/1920/1080/?random=6') no-repeat;
+}
+#section07
+#section08 {
+  background: #D1D1D1;
+}
+#section09
+#section10
+#section11
+#section12 {
+  background: rgb(50, 50, 50);
+}

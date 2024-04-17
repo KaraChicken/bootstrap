@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最終切版作業</title>
+  <!-- google 字型 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Swiper 輪播套件 -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css'>
+  <!-- booststrap 套件 -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- mdi-icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+  <!-- scss引入 -->
+  <link rel="stylesheet" href="./css/style.css">
+<style>
+  *,
+  *::before,
+  *::after {
+    font-family: 'Noto Sans TC', sans-serif;
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">導覽列</a>
+      <button class="navbar-toggler order-0" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="navbar-nav d-none d-lg-flex">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+            Phantom Blood
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Jonathan Joestar</a></li>
+            <li><a class="dropdown-item" href="#">Will A. Zeppeli</a></li>
+            <li><a class="dropdown-item" href="#">Robert E. O. Speedwagon</a></li>
+            <li><a class="dropdown-item" href="#">Erina Pendleton</a></li>
+            <li><a class="dropdown-item" href="#">DIO</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+            Battle Tendency
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Joseph Joestar</a></li>
+            <li><a class="dropdown-item" href="#">Caesar Anthonio Zeppeli</a></li>
+            <li><a class="dropdown-item" href="#">Lisalisa</a></li>
+            <li><a class="dropdown-item" href="#">Kars</a></li>
+            <li><a class="dropdown-item" href="#">Esidisi</a></li>
+            <li><a class="dropdown-item" href="#">Wamuu</a></li>
+            <li><a class="dropdown-item" href="#">Santana</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Stardust Crusaders
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Kujo Jotaro</a></li>
+            <li><a class="dropdown-item" href="#">Joseph Joestar</a></li>
+            <li><a class="dropdown-item" href="#">Mohammed Avdol</a></li>
+            <li><a class="dropdown-item" href="#">Kakyoin Noriaki</a></li>
+            <li><a class="dropdown-item" href="#">Jean Pierre Polnareff</a></li>
+            <li><a class="dropdown-item" href="#">Iggy</a></li>
+            <li><a class="dropdown-item" href="#">DIO</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Diamond Is Unbreakable
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Higashikata Josuke</a></li>
+            <li><a class="dropdown-item" href="#">Hirose Koichi</a></li>
+            <li><a class="dropdown-item" href="#">Nijimura Okuyasu</a></li>
+            <li><a class="dropdown-item" href="#">Kishibe Rohan</a></li>
+            <li><a class="dropdown-item" href="#">Kujo Jotaro</a></li>
+            <li><a class="dropdown-item" href="#">Joseph Joestar</a></li>
+            <li><a class="dropdown-item" href="#">Kira Yoshikage</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Golden Wind
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Giorno Giovanna</a></li>
+            <li><a class="dropdown-item" href="#">Bruno Bucciarati</a></li>
+            <li><a class="dropdown-item" href="#">Leone Abbacchio</a></li>
+            <li><a class="dropdown-item" href="#">Guido Mista</a></li>
+            <li><a class="dropdown-item" href="#">Narancia Ghirga</a></li>
+            <li><a class="dropdown-item" href="#">Pannacotta Fugo</a></li>
+            <li><a class="dropdown-item" href="#">Trish Una</a></li>
+            <li><a class="dropdown-item" href="#">Diavolo</a></li>
+            <li><a class="dropdown-item" href="#">Hirose Koichi</a></li>
+            <li><a class="dropdown-item" href="#">Kujo Jotaro</a></li>
+            <li><a class="dropdown-item" href="#">Jean Pierre Polnareff</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Stone Ocean
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Jolyne Cujoh</a></li>
+            <li><a class="dropdown-item" href="#">Ermes Costello</a></li>
+            <li><a class="dropdown-item" href="#">Emporio Alniño</a></li>
+            <li><a class="dropdown-item" href="#">Foo Fighters</a></li>
+            <li><a class="dropdown-item" href="#">Weather Report</a></li>
+            <li><a class="dropdown-item" href="#">Narciso Anasui</a></li>
+            <li><a class="dropdown-item" href="#">Kujo Jotaro</a></li>
+            <li><a class="dropdown-item" href="#">Enrico Pucci</a></li>
+          </ul>
+        </li>
+        
+
+      </ul>
+
+      
+      
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" id="offcanvasRightLabel">JoJo's Bizarre Adventure</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- 側邊欄內容 -->
+          <div class="accordion d-lg-none">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem1">
+                  1.Phantom Blood
+                </button>
+              </h2>
+              <div id="AccordionItem1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Jonathan Joestar
+                </div>
+                <div class="accordion-body">
+                  Will A. Zeppeli
+                </div>
+                <div class="accordion-body">
+                  Robert E. O. Speedwagon
+                </div>
+                <div class="accordion-body">
+                  Erina Pendleton
+                </div>
+                <div class="accordion-body">
+                  DIO
+                </div>
+              </div>
+            </div>
+            <!--------------------------------->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem2">
+                  2.Battle Tendency
+                </button>
+              </h2>
+              <div id="AccordionItem2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Joseph Joestar
+                </div>
+                <div class="accordion-body">
+                  Caesar Anthonio Zeppeli
+                </div>
+                <div class="accordion-body">
+                  Lisalisa
+                </div>
+                <div class="accordion-body">
+                  Kars
+                </div>
+                <div class="accordion-body">
+                  Esidisi
+                </div>
+                <div class="accordion-body">
+                  Wamuu
+                </div>
+                <div class="accordion-body">
+                  Santana
+                </div>
+              </div>
+            </div>
+            <!--------------------------------->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem3">
+                  3.Stardust Crusaders
+                </button>
+              </h2>
+              <div id="AccordionItem3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Kujo Jotaro
+                </div>
+                <div class="accordion-body">
+                  Joseph Joestar
+                </div>
+                <div class="accordion-body">
+                  Mohammed Avdol
+                </div>
+                <div class="accordion-body">
+                  Kakyoin Noriaki
+                </div>
+                <div class="accordion-body">
+                  Jean Pierre Polnareff
+                </div>
+                <div class="accordion-body">
+                  Iggy
+                </div>
+                <div class="accordion-body">
+                  DIO
+                </div>
+              </div>
+            </div>
+            <!--------------------------------->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem4">
+                  4.Diamond Is Unbreakable
+                </button>
+              </h2>
+              <div id="AccordionItem4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Higashikata Josuke
+                </div>
+                <div class="accordion-body">
+                  Hirose Koichi
+                </div>
+                <div class="accordion-body">
+                  Nijimura Okuyasu
+                </div>
+                <div class="accordion-body">
+                  Kishibe Rohan
+                </div>
+                <div class="accordion-body">
+                  Kujo Jotaro
+                </div>
+                <div class="accordion-body">
+                  Joseph Joestar
+                </div>
+                <div class="accordion-body">
+                  Kira Yoshikage
+                </div>
+              </div>
+            </div>
+            <!--------------------------------->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem5">
+                  5.Golden Wind
+                </button>
+              </h2>
+              <div id="AccordionItem5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Giorno Giovanna
+                </div>
+                <div class="accordion-body">
+                  Bruno Bucciarati
+                </div>
+                <div class="accordion-body">
+                  Leone Abbacchio
+                </div>
+                <div class="accordion-body">
+                  Guido Mista
+                </div>
+                <div class="accordion-body">
+                  Narancia Ghirga
+                </div>
+                <div class="accordion-body">
+                  Pannacotta Fugo
+                </div>
+                <div class="accordion-body">
+                  Trish Una
+                </div>
+                <div class="accordion-body">
+                  Diavolo
+                </div>
+                <div class="accordion-body">
+                  Hirose Koichi
+                </div>
+                <div class="accordion-body">
+                  Kujo Jotaro
+                </div>
+                <div class="accordion-body">
+                  Jean Pierre Polnareff
+                </div>
+              </div>
+            </div>
+            <!--------------------------------->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccordionItem6">
+                  6.Stone Ocean
+                </button>
+              </h2>
+              <div id="AccordionItem6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Jolyne Cujoh
+                </div>
+                <div class="accordion-body">
+                  Ermes Costello
+                </div>
+                <div class="accordion-body">
+                  Emporio Alniño
+                </div>
+                <div class="accordion-body">
+                  Foo Fighters
+                </div>
+                <div class="accordion-body">
+                  Weather Report
+                </div>
+                <div class="accordion-body">
+                  Narciso Anasui
+                </div>
+                <div class="accordion-body">
+                  Kujo Jotaro
+                </div>
+                <div class="accordion-body">
+                  Enrico Pucci
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 分隔線-------------------------------------------------------------------------------------->
+  <!-- Swiper 輪播套件 -->
+  <!-- Slider main container -->
+  <div id="swiper01" class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper w-100">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img class="d-block w-100" src="https://picsum.photos/1920/1080/?random=1">
+      </div>
+      <div class="swiper-slide">
+        <img class="d-block w-100" src="https://picsum.photos/1920/1080/?random=2">
+      </div>
+      <div class="swiper-slide">
+        <img class="d-block w-100" src="https://picsum.photos/1920/1080/?random=3">
+      </div>
+    </div>
+    <!-- 分頁 -->
+    <div class="swiper-pagination"></div>
+    <!-- 導覽箭頭 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <div id="content" class="content overflow-hidden">
+    <!-- section01 ---------------------------------------------------------------------------------->
+    <section id="section01" class="section01 position-relative end-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=10">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=10">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=10">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=10">
+            <h3>Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section02 ---------------------------------------------------------------------------------->
+    <section id="section02" class="section02 position-relative start-100">
+      <div class="container">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- 左邊圖片 -->
+            <div class="d-none col-md-6 d-lg-block">
+              <img class="h-100 w-100" src="https://picsum.photos/1920/1080/?random=99">
+            </div>
+            <!-- 右邊區塊 -->
+            <div class="col-12 col-lg-6">
+              <!-- 上行文字 -->
+              <div class="row">
+                <div class="col-12">
+                  <h3>
+                    Easy way to build perfect websites
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem pariatur dolore adipisci labore eum illo quasi, laboriosam a dolores architecto.
+                  </p>
+                </div>
+              </div>
+              <!-- 下行兩個圖片 -->
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <img class="w-100" src="https://picsum.photos/300/200/?random=35">
+                  <h3>Live Visual Builder</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae enim dicta maiores. Mollitia officiis sunt consequuntur similique? Dolore, alias!
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <img class="w-100" src="https://picsum.photos/300/200/?random=40">
+                  <h3>The Best Framework</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae enim dicta maiores. Mollitia officiis sunt consequuntur similique? Dolore, alias!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section03 ---------------------------------------------------------------------------------->
+    <section id="section03" class="section03 position-relative end-100">
+      <!-- 這邊用 anime 套件 -->
+      <div class="container">
+        <div class="row w-100 text-center">
+        <h3>Recent Works</h3>
+        <p>We have a lot of experience creating the best Joomla templates</p>
+        <div id="btn-group" class="row justify-content-center mb-2">
+          <div class="col d-flex justify-content-center flex-wrap">
+            <button type="button"data-category="all" data-bs-spy="scroll" class="btn btn-outline-primary mx-1 active">SHOW ALL</button>
+            <button type="button"data-category="branding" data-bs-spy="scroll" class="btn btn-outline-secondary mx-1">BRANDING</button>
+            <button type="button"data-category="design" data-bs-spy="scroll" class="btn btn-outline-success mx-1">DESIGN</button>
+            <button type="button"data-category="photography" data-bs-spy="scroll" class="btn btn-outline-danger mx-1">PHOTOGRAPHY</button>
+            <button type="button"data-category="web" data-bs-spy="scroll" class="btn btn-outline-warning mx-1">WEB</button>
+          </div>
+        </div>
+        <div class="row w-100 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-all item-branding">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=1">
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-design">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=2">
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-photography">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=3">
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-web">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=4">
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-branding">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=5">
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 px-1 my-1 item item-design">
+            <img class="w-100" src="https://picsum.photos/300/200/?random=6">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section04 ---------------------------------------------------------------------------------->
+    <section id="section04" class="section04 position-relative start-100">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-12 col-md-6 order-md-2 col-lg-3 mx-0 px-0">
+            <img class="w-100 h-100" src="https://picsum.photos/300/200/?random=1">
+          </div>
+          <div class="col-12 col-md-6 order-md-1 col-lg-3 mx-0 px-4 bg-dark text-bg-dark">
+            <h3>Unlimited Customization Possibilities</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, aliquid odit. Totam esse, sed quibusdam dignissimos soluta fugiat numquam quos porro itaque harum, eligendi perferendis at quas pariatur laborum? Vero?
+            </p>
+          </div>
+          <div class="col-12 order-3 col-md-6 col-lg-3 mx-0 px-0">
+            <img class="w-100 h-100" src="https://picsum.photos/300/200/?random=3">
+          </div>
+          <div class="col-12 order-4 col-md-6 col-lg-3 mx-0 px-4 bg-dark text-bg-dark">
+            <h3>Unlimited Color Combinations</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, aliquid odit. Totam esse, sed quibusdam dignissimos soluta fugiat numquam quos porro itaque harum, eligendi perferendis at quas pariatur laborum? Vero?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section05 ---------------------------------------------------------------------------------->
+    <section id="section05" class="section05 position-relative end-100">
+      <div class="container py-5">
+        <div class="row h-100">
+          <div class="col-12 col-md-6">
+            <h3>What we have for you</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et tempore exercitationem nobis
+            </p>
+            <img class="rounded-circle" src="https://picsum.photos/50/50/?random=5">
+            <h4>QuickStar Package</h4>
+            <p>
+              Create a clon of our demo on your remote or local hosting in minutes.
+            </p>
+            <img class="rounded-circle" src="https://picsum.photos/50/50/?random=9">
+            <h4>Template Layout Builder</h4>
+            <p>
+              Create a clon of our demo on your remote or local hosting.
+            </p>
+            <img class="rounded-circle" src="https://picsum.photos/50/50/?random=7">
+            <h4>Page Builder</h4>
+            <p>
+              The best Drang & Drop and Live visual Page Builder for Joomla.
+            </p>
+            <img class="rounded-circle" src="https://picsum.photos/50/50/?random=6">
+            <h4>Header and Footer</h4>
+            <p>
+              One-click header  layout change, and editable Footer variations.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <img class="w-100 h-100" src="./images/tablet_001.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section06 ---------------------------------------------------------------------------------->
+    <section id="section06" class="section06 position-relative start-100">
+      <div class="container vh-100">
+        <div class="row align-items-center">
+          <div class="col-12 text-center text-white">
+            <h3>Experence</h3>
+            <p>Our experience guarantees high quality templates.</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-white">
+            <img src="https://picsum.photos/50/50/?random=46">
+            <h3>12000</h3>
+            <p>HAPY CLIENTS</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-white">
+            <img src="https://picsum.photos/50/50/?random=33">
+            <h3>50</h3>
+            <p>TEMPLATES DEVELOPED</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-white">
+            <img src="https://picsum.photos/50/50/?random=22">
+            <h3>480</h3>
+            <p>WORKS COMPLETED</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-white">
+            <img src="https://picsum.photos/50/50/?random=73">
+            <h3>1200</h3>
+            <p>LIVE CHATS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section07 ---------------------------------------------------------------------------------->
+    <section id="section07" class="section07 position-relative end-100">
+      <div class="container vh-100">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img class="w-100" src="./images/desktop_001.png">
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h3>What you can do with Reto theme</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat.
+                </p>
+              </div>
+              <div class="col-12">
+                <h5><b>Elegant & Unqiue Designs</b></h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin.
+                </p>
+              </div>
+              <div class="col-12">
+                <h5><b>Really Responsive Sites</b></h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin.
+                </p>
+              </div>
+              <div class="col-12">
+                <h5><b>Save Time & Money</b></h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section08 ---------------------------------------------------------------------------------->
+    <section id="section08" class="section08 mt-5 position-relative start-100">
+      <div class="container vh-100">
+        <div class="row">
+          <div class="col text-center mb-3">
+            <h3>Amazing!</h3>
+            <p>These are some characteristics that make a Reto, an amazing template</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h4>Bootstrap 5</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Animations</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Unlimited Colors</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Google Fonts</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Exclusive Addons</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Header Styles</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Portfolio Variations</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Tons of Blog Layouts</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Megamenu & Off-canvas</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Social Connect</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Google Map</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Gallery</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Videos</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Audio</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+          <div class="col-4">
+            <h4>Many More</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section09 ---------------------------------------------------------------------------------->
+    <section id="section09" class="section09 position-relative end-100">
+      
+      <div class="container">
+        <div class="col-12 text-center">
+          <h3>Our Clients Say</h3>
+          <p>
+            How happy your customers will be
+          </p>
+        </div>
+        <div class="col-12">
+          <!-- swiper 輪播套件 -->
+          <!-- Slider main container -->
+          <div id="swiper02" class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="d-flex justify-content-center">
+                    <img class="rounded-circle" style="width: 10rem; height: 10rem;" src="https://picsum.photos/100/100/?random=1">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </p>
+                    <p>
+                      Byron jackson
+                    </p>
+                    <p>Customer | <a href="#">Reto Inc</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="d-flex justify-content-center">
+                    <img class="rounded-circle" style="width: 10rem; height: 10rem;" src="https://picsum.photos/100/100/?random=2">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </p>
+                    <p>
+                      Marcos
+                    </p>
+                    <p>Customer | <a href="#">Reto Inc</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="d-flex justify-content-center">
+                    <img class="rounded-circle" style="width: 10rem; height: 10rem;" src="https://picsum.photos/100/100/?random=3">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </p>
+                    <p>
+                      Alessandra
+                    </p>
+                    <p>Customer | <a href="#">Reto Inc</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="d-flex justify-content-center">
+                    <img class="rounded-circle" style="width: 10rem; height: 10rem;" src="https://picsum.photos/100/100/?random=4">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </p>
+                    <p>
+                      Andrea
+                    </p>
+                    <p>Customer | <a href="#">Reto Inc</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- section10 ---------------------------------------------------------------------------------->
+    <section id="section10" class="section10 position-relative start-100">
+      <div id="swiper03" class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=1">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=2">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=3">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=4">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=5">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=6">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://picsum.photos/300/200/?random=7">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section11 ---------------------------------------------------------------------------------->
+    <section id="section11" class="section11 position-relative end-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h3>Latest Posts</h3>
+            <p>News and tips about our product.</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p><a href="#">Happy with at sunset</a></p>
+            <p>GENIUS | AGENCY | 05 FEB, 2023</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <img src="https://picsum.photos/300/200/?random=2">
+            <p><a href="#">Representative of the agency</a></p>
+            <p>GENIUS | AGENCY | 05 FEB, 2023</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <img src="https://picsum.photos/300/200/?random=3">
+            <p><a href="#">Representative of the agency</a></p>
+            <p>GENIUS | AGENCY | 05 FEB, 2023</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section12 ---------------------------------------------------------------------------------->
+    <section id="section12" class="section12 position-relative start-100">
+      <div class="container text-white py-3">
+        <div class="row">
+          <div class="col-3">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque et non erat. Maecenas nibh dolor, malesuada et bibendum.
+            </p>
+            <i class="mdi mdi-twitter"></i>
+            <i class="mdi mdi-facebook"></i>
+            <i class="mdi mdi-instagram"></i>
+            <i class="mdi mdi-ab-testing"></i>
+          </div>
+          <div class="col-3">
+            <h3>Contact Us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin pellentesque.
+              <br>
+              <br>
+              Mendiola 1590 - Lima
+              info@retocompany.com
+              5101 5574657
+              Mon - Sat 9:00 to 19:00
+            </p>
+          </div>
+          <div class="col-3">
+            <h3>Company</h3>
+            <p><a href="#">Our Portfolio</a></p>
+            <p><a href="#">Our Blog</a></p>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Our Services</a></p>
+            <p><a href="#">Contact Form</a></p>
+          </div>
+          <div class="col-3">
+            <h3>Popular Posts</h3>
+            <h5><a href="#">Happy with at sunset</a></h5>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...
+            </p>
+            <h5><a href="#">Creating good brands</a></h5>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- footer -------------------------------------------------------------------------------------->
+  <section id="footer" class="bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">© 2024 Your Company - By Unitemplates</div>
+        <div class="col-12 col-md-6 d-md-flex justify-content-end">
+          <span class="mdi mdi-facebook"></span>
+          <span class="mdi mdi-twitter"></span>
+          <span class="mdi mdi-instagram"></span>
+          <span class="mdi mdi-youtube"></span>
+          <span class="mdi mdi-television-box"></span>
+          <span class="mdi mdi-baby-face-outline"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 引入套件 ------------------------------------------------------------------------------------>
+  
+  <!-- Swiper 輪播套件 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js'></script>
+  <script src="./js/swiper.js"></script>
+
+  <!-- bootstrap -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
+  <!-- jQuery 引入 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <!-- Gsap 引入 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'></script>
+  <script src="./js/gsap.js"></script>
+  <!-- self -->
+  <script src="./js/all.js"></script>
+</body>
+</html>
